@@ -1,0 +1,126 @@
+.panel div img {
+  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  cursor:pointer;
+}
+
+.panel {
+  margin: 20px;
+  position: relative;
+  margin:0 auto;
+  
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+}
+
+/* -- make sure to declare a default for every property that you want animated -- */
+/* -- general styles, including Y axis rotation -- */
+.panel .front {
+  visibility:visible;
+  position:absolute;
+  z-index: 900;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  margin:auto auto;
+  line-height:inherit;
+
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.panel.same .front {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+}
+
+.panel.opposite .front {
+  -webkit-transform: rotate3d(45,45,0,0deg);
+  -moz-transform: rotate3d(45,45,0,0deg);
+}
+
+.panel.flip .front {
+  visibility:hidden;
+  z-index: 900;
+}
+.panel.flip.same .front {
+
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+}
+
+.panel.flip.opposite .front {
+  -webkit-transform: rotate3d(-45,-45,0,180deg);
+  -moz-transform: rotate3d(-45,-45,0,180deg);
+}
+
+.panel .back {
+  position:absolute;
+  top: 0;
+  z-index: 800;
+  width: inherit;
+  height: inherit;
+  margin:auto auto;
+  text-align: center;
+  line-height:inherit;
+  visibility:hidden;
+  
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+
+  /* -- transition is the magic sauce for animation -- */
+  -o-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.panel.same .back {
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.panel.opposite .back {
+  -webkit-transform: rotate3d(-45,-45,0,-180deg);
+  -moz-transform: rotate3d(-45,-45,0,-180deg);
+}
+  
+.panel.flip .back {
+  visibility:visible;
+  z-index: 1000;
+}
+
+.panel.flip.same .back {
+
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+}
+
+.panel.flip.opposite .back {
+  -webkit-transform: rotate3d(45,45,0,0deg);
+  -moz-transform: rotate3d(45,45,0,0deg);
+}
+
+
+/* Prevent the resize that comes from an image load from transitioning */
+.panel .loading {
+  -o-transition: all 0s;
+  -ms-transition: all 0s;
+  -moz-transition: all 0s;
+  -webkit-transition: all 0s;
+  transition: all 0s;
+}

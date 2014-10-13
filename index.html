@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Postcard Doodles</title>
+    <link href="/css/general.css" rel="stylesheet" />
+    <link href="/css/flip.css" rel="stylesheet" />
+  </head>
+  <body>
+    <ul id="postcards">
+      <script id="mustache-postcard" type="x-tmpl-mustache">
+        <li>
+          <div class="postcard panel {{relativeOrientation}}" style="width:{{boundingBox}}px; height:{{boundingBox}}px;">
+            {{#front}}<div class="front"><img src="{{url}}" style="width:{{width}}px; height:{{height}}; margin: {{marginVertical}}px {{marginHorizontal}}px;" /></div>{{/front}}
+            {{#back}}<div class="back"><img src="{{url}}" style="width:{{width}}px; height:{{height}}; margin: {{marginVertical}}px {{marginHorizontal}}px;" /></div>{{/back}}
+          </div>
+        </li>
+      </script>
+    </ul>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/mustache.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
