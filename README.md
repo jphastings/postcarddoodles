@@ -1,3 +1,5 @@
 # Postcard Doodles
 
-Send me your doodles on a postcard.
+Self addressed postcards left for people to find, doodle on and send back.
+
+[postcarddoodles.byjp.me](http://postcarddoodles.byjp/me)

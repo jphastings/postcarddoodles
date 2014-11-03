@@ -1,0 +1,28 @@
+{
+  "left": {
+    "latitude": 51.5166742,
+    "longitude": -0.1769339,
+    "name": "Paddington Station, London, England",
+    "on": "2014-10-25"
+  },
+  "receieved": {
+    "on": "2014-11-03"
+  },
+  "text": {
+    "01": [],
+    "02": [
+      {
+        "type": "handwritten",
+        "content": "Make a doodle here"
+      },
+      {
+        "type": "handwritten",
+        "content": "Sign your work here"
+      },
+      {
+        "type": "handwritten",
+        "content": "Go see them all here: http://postcarddoodles.byjp.me"
+      }
+    ]
+  }
+}

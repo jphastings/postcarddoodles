@@ -33,3 +33,20 @@ body {
   margin: 5px;
   padding: 0;
 }
+
+#next-card {
+  position: fixed;
+  bottom: 0;
+  margin: 10px 0;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 32px;
+  z-index: 10000;
+  outline: none;
+}
+
+#next-card:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}

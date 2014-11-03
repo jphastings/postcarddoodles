@@ -5,7 +5,13 @@
     <link href="/css/flip.css" rel="stylesheet" />
   </head>
   <body>
+    <button id="next-card">&#x25BE;</button>
     <ul id="postcards">
+      <li>
+        <div class="postcard panel same" style="width:640px; height:640px;">
+          <div class="front"><img src="img/postcarddoodles.jpg" style="width:640px; height:398; margin: 121px 0px;" alt="Postcard Doodles"></div>
+        </div>
+      </li>
       <script id="mustache-postcard" type="x-tmpl-mustache">
         <li>
           <div class="postcard panel {{relativeOrientation}}" style="width:{{boundingBox}}px; height:{{boundingBox}}px;">

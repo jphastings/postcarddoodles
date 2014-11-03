@@ -9,6 +9,24 @@
       })
     });
 
+    $('#next-card').click(function(e) {
+      e.preventDefault();
+      $.each($('#postcards li'), function(i, li) {
+        var pc = $(li);
+        if (pc.position().top > $(window).scrollTop()) {
+          var img = pc.find('img:visible');
+          if (window.innerHeight > pc.height()) {
+            var pos = pc.offset().top;
+          } else {
+            var pos = img.offset().top - Math.max(0, (window.innerHeight - img.height()) / 2);
+          }
+
+          $('html, body').animate({ scrollTop: pos });
+          return false;
+        }
+      });
+    });
+
     templatePostcard = $('#mustache-postcard').html();
     Mustache.parse(templatePostcard);
   })
