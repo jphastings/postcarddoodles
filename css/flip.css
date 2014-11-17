@@ -1,8 +1,15 @@
 .panel div img {
-  -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
-  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
-  box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+  -moz-box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  -webkit-box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.7);
   cursor:pointer;
+  transition: box-shadow 0.25s;
+}
+
+.panel:hover div img {
+  -moz-box-shadow: 14px 14px 40px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 14px 14px 40px rgba(0,0,0,0.5);
+  box-shadow: 14px 14px 40px rgba(0,0,0,0.5);
 }
 
 .panel {
